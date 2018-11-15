@@ -14,17 +14,16 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 title: KholinLabs
+author: Nikita Kholin
 email: nik.kholin@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   A blog about scientific web development.
-  Here you'll find all kinds of things related to Web Development and Data Science.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 show_excerpts: true
 google_analytics: UA-102898465-3
 
-twitter_username: hmlON_
 linkedin_username: Nikita-Kholin
 github_username:  hmlON
 
@@ -32,6 +31,8 @@ github_username:  hmlON
 markdown: kramdown
 permalink: /:title
 theme: minima
+sass:
+  style: compressed
 plugins:
   - jekyll-feed
 
