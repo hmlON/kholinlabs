@@ -2,31 +2,50 @@
 layout: default
 ---
 
-<div class="home">
-  {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
-  {%- endif -%}
+<link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
 
-  {{ content }}
 
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in site.posts -%}
-      <li class="post">
-        <h3 class="post-heading">
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
+<main class="home">
+  <header class="header">
+    <h1 class="title">{{ site.title | escape }}</h1>
+    <p class="description">Nikita Kholin's laboratory for web development and data science</p>
+    <ul class="social-links">
+      <a target="_blank" href="https://github.com/hmlON"><i class="social-link fab fa-github"></i></a>
+      <a target="_blank" href="https://www.linkedin.com/in/nikita-kholin/"><i class="social-link fab fa-linkedin"></i></a>
+      <a target="_blank" href="https://www.facebook.com/hmlon0"><i class="social-link fab fa-facebook"></i></a>
+      <a target="_blank" href="https://twitter.com/hmlON_"><i class="social-link fab fa-twitter"></i></a>
+      <a target="_blank" href="https://medium.com/@hmlon"><i class="social-link fab fa-medium"></i></a>
+      <a target="_blank" href="https://dev.to/hmlon"><i class="social-link fab fa-dev"></i></a>
     </ul>
-  {%- endif -%}
+  </header>
 
-</div>
+  <section class="posts content">
+    {%- if site.posts.size > 0 -%}
+      <h2 class="post-list-heading">Posts</h2>
+
+      <ul class="post-list">
+        {%- for post in site.posts -%}
+          <article class="post">
+
+            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span class="post-date">{{ post.date | date: date_format }}</span>
+
+            <div class="post-content">
+              <h4 class="post-heading">
+                <a class="post-link" href="{{ post.url | relative_url }}">
+                  {{ post.title | escape }}
+                </a>
+              </h4>
+
+              {%- if site.show_excerpts -%}
+                {{ post.excerpt }}
+              {%- endif -%}
+            </div>
+
+          </article>
+        {%- endfor -%}
+      </ul>
+
+    {%- endif -%}
+  </section>
+</main>
