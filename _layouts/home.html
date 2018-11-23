@@ -31,6 +31,8 @@ layout: default
             <span class="post-date">{{ post.date | date: date_format }}</span>
 
             <div class="post-content">
+              <img src="{{ post.cover_image }}" alt="" class="post-image">
+
               <h4 class="post-heading">
                 <a class="post-link" href="{{ post.url | relative_url }}">
                   {{ post.title | escape }}
@@ -41,6 +43,7 @@ layout: default
                 {{ post.excerpt }}
               {%- endif -%}
             </div>
+
 
           </article>
         {%- endfor -%}
