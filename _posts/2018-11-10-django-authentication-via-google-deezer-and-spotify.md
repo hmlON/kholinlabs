@@ -3,13 +3,12 @@ layout: post
 title:  "Django authentication via Google, Deezer, and Spotify"
 date:   2018-11-21 22:25:25 +0200
 tags:   django python authentication
+cover_image: https://images.unsplash.com/photo-1493146165056-bb822d9422dd?ixlib=rb-0.3.5&s=dc735fbec7584ac515dfe9047dbdbe56&auto=format&fit=crop&w=1650&q=80
 ---
 
 In this tutorial we will add an ability to sign up, sign in via Google, Deezer, and Spotify, view a success screen, and sign out afterward. Our project is going to be about music releases notifications.
 
 I've already created a Django project with a landing page in [a previous tutorial](https://kholinlabs.com/creating-a-landing-page-in-django).
-
-![red and pink houses with brown wooden doors](https://images.unsplash.com/photo-1493146165056-bb822d9422dd?ixlib=rb-0.3.5&s=dc735fbec7584ac515dfe9047dbdbe56&auto=format&fit=crop&w=1650&q=80)
 
 How will we do that?
 

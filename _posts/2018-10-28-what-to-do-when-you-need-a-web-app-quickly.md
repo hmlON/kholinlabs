@@ -1,16 +1,15 @@
 ---
 layout: post
 title:  "What to do when you need a web app quickly"
-subtitle:  "A quick guide to Flask"
+description:  "A quick guide to Flask"
 date:   2018-10-28 21:30:05 +0200
 categories: flask numpy
+cover_image: https://images.unsplash.com/photo-1531083894382-04a4f09c998f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5378eb57b9dafc68991c2251fcd05bac&auto=format&fit=crop&w=2250&q=80
 ---
 
 Recently, I needed a piece of software where you can input some numbers, validate and process them, and print some result. Since I needed to do scientific computing with it I decided to use Python with [NumPy](http://www.numpy.org/) and [SciPy](https://www.scipy.org/) and because I needed validation I decided that HMTL input validations would be the easiest to use.
 
 Then I had a choice from a ton of [Python web frameworks](https://wiki.python.org/moin/WebFrameworks) and since “microframework” sounded like exactly what I need and I’ve heard the name before I decided to give [Flask](http://flask.pocoo.org/) a try.
-
-![Photo by [Simone Viani](https://unsplash.com/photos/0P18_RI36yE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/bottle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](https://cdn-images-1.medium.com/max/7920/1*-AoVhprVtRLLtsD9ZmB2pA.jpeg)*Photo by [Simone Viani](https://unsplash.com/photos/0P18_RI36yE?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/search/photos/bottle?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)*
 
 ## Getting started
 

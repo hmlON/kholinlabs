@@ -3,11 +3,10 @@ layout: post
 title:  "Creating a landing page in Django"
 date:   2018-11-12 22:57:57 +0200
 tags:   django python landing
+cover_image: https://images.unsplash.com/photo-1516849947868-a9dfa8bdbf91?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c34fe623c2853b7de245758d5eda899b&auto=format&fit=crop&w=3000&q=80
 ---
 
 In this tutorial we will create a landing page for a music releases notifications application in [Django](https://www.djangoproject.com/). To begin, we need to create a Django project.
-
-![Landing](https://images.unsplash.com/photo-1516849947868-a9dfa8bdbf91?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=c34fe623c2853b7de245758d5eda899b&auto=format&fit=crop&w=3000&q=80)
 
 ## Creating a Django project
 

@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+
+<article class="post-page" itemscope itemtype="http://schema.org/BlogPosting">
+  <header class="header" style="background-image: url({{ page.cover_image }})">
+    <div class="home">
+      <a class="link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
+
+    <h1 class=title itemprop="name headline">{{ page.title | escape }}</h1>
+
+    <div class="info">
+      <time class="date-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="name" itemprop="name">{{ site.author | escape }}</span>
+      </span>
+    </div>
+  </header>
+
+  <main class="content" itemprop="articleBody">
+    {{ content }}
+  </main>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+</article>
