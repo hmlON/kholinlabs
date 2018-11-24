@@ -15,6 +15,7 @@
   background-color: #555;
   background-blend-mode: multiply;
   margin-bottom: 3rem;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 
@@ -29,6 +30,7 @@
     font-size: 2rem;
     text-align: center;
     margin-bottom: 2rem;
+    padding: 1rem;
   }
 
   .social-links {
@@ -46,7 +48,7 @@
 }
 
 .content {
-  max-width: 50rem;
+  max-width: 65rem;
   width: 100vw;
   word-wrap: break-word;
 }
@@ -77,12 +79,7 @@
   }
 
   .post-content {
-    border-left: 2px solid #999;
     flex: 1;
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    padding-left: 2rem;
-    padding-right: 2rem;
     margin-bottom: 0;
   }
 
@@ -96,7 +93,7 @@
   }
 
   .post-date {
-    margin-right: 2rem;
+    margin-right: 3rem;
   }
 }
 
@@ -155,6 +152,8 @@
   }
 
   .content {
+    max-width: 50rem;
+
     p, h1, h2, h3, h4 {
       padding: 0 1rem;
     }
@@ -167,5 +166,39 @@
       padding: 0;
       margin: 0;
     }
+  }
+}
+
+@media all and (max-width: 800px) {
+  .home {
+    .post-date-mobile {
+      padding-bottom: 0.5rem;
+    }
+
+    .post-date-desktop, .post-date-desktop-hidden {
+      display: none;
+    }
+
+    .post-content {
+      padding: 2rem;
+    }
+  }
+}
+
+
+@media all and (min-width: 801px) {
+  .home {
+    .post-content {
+      border-left: 2px solid #999;
+      padding: 3rem;
+    }
+  }
+
+  .post-date-mobile {
+    display: none;
+  }
+
+  .post-date-desktop-hidden {
+    visibility: hidden;
   }
 }

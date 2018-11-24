@@ -32,7 +32,7 @@ layout: default
           <article class="post">
 
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <span class="post-date">{{ post.date | date: date_format }}</span>
+            <div class="post-date post-date-desktop">{{ post.date | date: date_format }}</div>
 
             <div class="post-content">
               <img src="{{ post.cover_image }}" alt="" class="post-image">
@@ -42,12 +42,14 @@ layout: default
                   {{ post.title | escape }}
                 </a>
               </h4>
+              <div class="post-date post-date-mobile">{{ post.date | date: date_format }}</div>
 
               {%- if site.show_excerpts -%}
                 {{ post.excerpt }}
               {%- endif -%}
             </div>
 
+            <div class="post-date post-date-desktop post-date-desktop-hidden">{{ post.date | date: date_format }}</div>
 
           </article>
         {%- endfor -%}
