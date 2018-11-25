@@ -47,6 +47,10 @@ layout: default
               {%- if site.show_excerpts -%}
                 {{ post.excerpt }}
               {%- endif -%}
+
+              <div class="post-read-more-container">
+                <a class="post-read-more" href="{{ post.url | relative_url }}">Read more...</a>
+              </div>
             </div>
 
             <div class="post-date post-date-desktop post-date-desktop-hidden">{{ post.date | date: date_format }}</div>
