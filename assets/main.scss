@@ -64,7 +64,7 @@
   .post {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-items: stretch;
     justify-content: center;
 
     .post-image {
@@ -116,9 +116,9 @@
   }
 
 
-  .post-date {
-    margin-right: 3rem;
-  }
+  // .post-date {
+  //   margin-right: 3rem;
+  // }
 }
 
 .post-page {
@@ -204,7 +204,7 @@
       padding-bottom: 0.5rem;
     }
 
-    .post-date-desktop, .post-date-desktop-hidden {
+    .post-date-desktop {
       display: none;
     }
 
@@ -217,7 +217,15 @@
 
 @media all and (min-width: 801px) {
   .home {
+    // .post {
+      // align-items: stretch;
+      // justify-content: stretch;
+      // align-content: stretch;
+      // align-self: stretch;
+    // }
+
     .post-content {
+      flex: 100;
       border-left: 1px solid green;
       padding: 4rem 4rem 1rem 4rem;
     }
@@ -226,13 +234,30 @@
       border-top: 1px solid green;
       border-top-left-radius: 2rem;
     }
-  }
 
-  .post-date-mobile {
-    display: none;
-  }
+    article:first-of-type > .post-date-desktop-hidden {
+      border-top: 1px solid green;
+    }
 
-  .post-date-desktop-hidden {
-    visibility: hidden;
+    .post-date-mobile{
+      display: none;
+    }
+
+    .post-date-desktop {
+      flex: 1;
+      margin: 0;
+      padding-right: 3rem;
+    }
+
+    .post-date-desktop-hidden > * {
+      visibility: hidden;
+    }
+
+    .post-date-desktop-shown {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+    }
   }
 }

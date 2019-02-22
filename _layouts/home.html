@@ -32,7 +32,7 @@ layout: default
           <article class="post">
 
             {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <div class="post-date post-date-desktop">{{ post.date | date: date_format }}</div>
+            <div class="post-date post-date-desktop post-date-desktop-shown">{{ post.date | date: date_format }}</div>
 
             <div class="post-content">
               <img src="{{ post.cover_image }}" alt="" class="post-image">
@@ -53,7 +53,9 @@ layout: default
               </div>
             </div>
 
-            <div class="post-date post-date-desktop post-date-desktop-hidden">{{ post.date | date: date_format }}</div>
+            <div class="post-date post-date-desktop post-date-desktop-hidden">
+              <time>{{ post.date | date: date_format }}</time>
+            </div>
 
           </article>
         {%- endfor -%}

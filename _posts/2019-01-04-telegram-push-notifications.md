@@ -2,7 +2,7 @@
 layout: post
 title:  Telegram push notifications
 date:   2019-02-13 00:36:36 +0200
-tags:   telegram
+tags:   bots telegram
 cover_image: https://images.unsplash.com/photo-1522096823084-2d1aa8411c13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80
 ---
 
