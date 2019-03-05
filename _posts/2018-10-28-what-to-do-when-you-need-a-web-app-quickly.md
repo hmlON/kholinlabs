@@ -11,7 +11,7 @@ Recently, I needed a piece of software where you can input some numbers, validat
 
 Then I had a choice from a ton of [Python web frameworks](https://wiki.python.org/moin/WebFrameworks) and since “microframework” sounded like exactly what I need and I’ve heard the name before I decided to give [Flask](http://flask.pocoo.org/) a try.
 
-## Getting started
+# Getting started
 
 All you need to get started after you’ve [installed Flask](http://flask.pocoo.org/docs/1.0/installation/) is only 1 python file.
 
@@ -32,7 +32,7 @@ FLASK_APP=app.py FLASK_ENV=development flask run
 
 That’s all you need to render a simple string on the “/” page. But who the fuck needs to render a string? Even if all you need is only to render a string it would look awful without some CSS. So we’ll go deeper and get into rendering templates.
 
-## Rendering templates
+# Rendering templates
 
 In case you want to render a template you can use a built-in method called, you guessed it, `render_template`.
 
@@ -72,7 +72,7 @@ def equations():
     return render_template('equations.html')
 ```
 
-## The first form
+# The first form
 
 The current project is going to solve a system of linear equations. First of all, we need to know how many equations there are. To get that number we can use a form with one number input.
 
@@ -94,7 +94,7 @@ The number could be bigger than 100, but the website won’t be usable (it’s n
 
 After entering any valid number, click on “Submit” button and a parameter will be added to the URL `/equations?equations_number=2`.
 
-## Dealing with arguments
+# Dealing with arguments
 
 To read that parameter on the backend `request.args` can be used like so:
 
@@ -109,7 +109,7 @@ def equations():
 
 Here we’re passing a name of the needed parameter to request.args.get and a type so that it converts to integer. equations_number argument is then passed to render_template so that it is available in the template.
 
-## Is this a system of linear equations?
+# Is this a system of linear equations?
 
 All we need for the system of equations is a matrix of coefficients `A` and a column vector `b` so that the equation would be `Ax=b`. Example:
 
@@ -125,7 +125,7 @@ A = [[1, 2], [4, 5]]
 b = [[3], [6]]
 ```
 
-## Making a form with a two-dimensional array input
+# Making a form with a two-dimensional array input
 
 Right now we need a form for `A` and `b`.
 
@@ -165,7 +165,7 @@ A = request.args.getlist(‘a’, type=int) # 1-dimensional
 A = np.reshape(A, shape)                # 2-dimensional
 ```
 
-## Conditional rendering
+# Conditional rendering
 
 I would like to hide equations number form after it is submitted. To do that we can use “conditional rendering”. It’s pretty straightforward:
 
@@ -181,7 +181,7 @@ I would like to hide equations number form after it is submitted. To do that we 
 
 ![](https://cdn-images-1.medium.com/max/1600/1*3MdaFhyw5-d7ogP6ia0Fwg.png)
 
-## Finally solving the system
+# Finally solving the system
 
 Once we have all the coefficients we can solve the system of equations. I could try to bother with how you can invert matrix `A` and multiply it with a vector `b`, but I won’t. Today we’ll use NumPy once again. This library has a function for exactly what we want — solving a system of linear equations and it is called [`numpy.linalg.solve`](https://docs.scipy.org/doc/numpy-1.15.0/reference/generated/numpy.linalg.solve.html). All it needs is our matrix `A` and `b`, which we already have.
 
@@ -245,7 +245,7 @@ With that we can render our final form:
 
 ![](https://cdn-images-1.medium.com/max/2688/1*35qefjzGF59MzHkWWcrAPQ.png)
 
-## Areas of improvement (homework?)
+# Areas of improvement (homework?)
 
 * Separate views and actions for different screens of equation
 
@@ -253,7 +253,7 @@ With that we can render our final form:
 
 * Form accessibility for bigger inputs and prettier output
 
-## Conclusion
+# Conclusion
 
 In this story I’ve covered:
 

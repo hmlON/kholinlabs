@@ -8,7 +8,7 @@ cover_image: https://images.unsplash.com/photo-1516849947868-a9dfa8bdbf91?ixlib=
 
 In this tutorial we will create a landing page for a music releases notifications application in [Django](https://www.djangoproject.com/). To begin, we need to create a Django project.
 
-## Creating a Django project
+# Creating a Django project
 
 I will assume you have Django installed but in case you don't, you can use the [official installation guide](https://docs.djangoproject.com/en/2.1/topics/install/).
 
@@ -36,7 +36,7 @@ After visiting `127.0.0.1:8000` you should see a screen that everything is great
 
 Except it's not your landing page...
 
-## Where do we start?
+# Where do we start?
 
 To add a landing page we need to create an "app" which is a Django concept for things that are not coupled to your app and can be extracted from it (for example authentication which can be used in other applications too).
 
@@ -62,7 +62,7 @@ INSTALLED_APPS = [
 
 The newly created `pages` app has a new `pages`  folder with a couple of python files. Particular ones that interest us are `pages/urls.py` and  `pages/views.py`.
 
-## URLs
+# URLs
 
 When a request comes to the server, Django has to find a "view", a function that will process the request and send the response. The way Django finds how to connect a URL that came with the request and a view is via `urlpatterns` which are located in your project's main directory. In my case, it's  `mun/urls.py`.
 
@@ -91,7 +91,7 @@ urlpatterns = [
 ]
 ```
 
-## The view
+# The view
 
 If you recall, the `index` view is not yet created so let's go ahead and create it in `pages/views.py`
 
@@ -104,7 +104,7 @@ def index(request):
 
 Our `index` action simply renders a  `'pages/index.html'` template which is again, not yet created. So let's create it.
 
-## The template
+# The template
 
 I want the landing page to contain the project's name, a brief description and a list of features.
 
@@ -160,7 +160,7 @@ However, if we check our browser now we'll see a not so pleasant picture:
 
 ![A landing page without css](assets/2018-11-10-creating-a-landing-page-in-django/landing-with-no-html.png)
 
-## A CSS is a static file
+# A CSS is a static file
 
 To add CSS to the template Django has a whole app called [`django.contrib.staticfiles`](https://docs.djangoproject.com/en/2.1/ref/contrib/staticfiles/). By default , Django looks for static files in `static` folders of all apps. To add styles to the template we need to tell Django that we're going to use static files and add a stylesheet tag like so:
 
@@ -230,7 +230,7 @@ Here's the full code glued together:
 {% endraw %}
 ```
 
-## Adding some style
+# Adding some style
 
 ![Some style](https://images.unsplash.com/photo-1523268755815-fe7c372a0349?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78f4a9da162471fff0acce3b5be33393&auto=format&fit=crop&w=2250&q=80)
 
@@ -270,7 +270,7 @@ Here's how our final `landing-section` class looks like
 } 
 ```
 
-## The image in the background
+# The image in the background
 
 I've used [Unsplash](https://unsplash.com/) to find the image that would fit my preference.
 
@@ -345,7 +345,7 @@ And here's what I got:
 
 If you have any ideas for the features part, please, write them in the comments because it currently looks pretty awful. 
 
-## One more thing
+# One more thing
 
 We've got most things done by now, however, there is one more. It's the icon. I like [LogoMark](https://logomakr.com) website for this purpose. It is very simple to use and has a lot of beautiful icons and stuff.
 
@@ -361,7 +361,7 @@ After you download the icon in `.icon` extension, just copy it to the `pages/sta
 {% endraw %}
 ```
 
-## Conclusion
+# Conclusion
 
 In this story I’ve covered:
 

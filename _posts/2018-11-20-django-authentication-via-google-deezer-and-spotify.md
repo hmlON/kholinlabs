@@ -16,7 +16,7 @@ We're going to use a [social-app-django library](https://github.com/python-socia
 
 To install the library please follow [an official installation guide](https://python-social-auth.readthedocs.io/en/latest/installing.html).
 
-## Adding social-app-django to your Django project
+# Adding social-app-django to your Django project
 
 First of all, you need to add the library to our `INSTALLED_APPS` in your project's `settings.py`
 
@@ -59,7 +59,7 @@ SOCIAL_AUTH_URL_NAMESPACE = 'social'
 
 Now you should have nothing, but we're ready to add an auth provider to the project. For more information, you can read [the official python-social-auth installation guide for Django](https://python-social-auth.readthedocs.io/en/latest/configuration/django.html). 
 
-## Authentication via Google(+)
+# Authentication via Google(+)
 
 ![](https://images.unsplash.com/photo-1529612700005-e35377bf1415?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=45b2666d6486f1e881e2fe341b0728e8&auto=format&fit=crop&w=1950&q=80)
 
@@ -96,7 +96,7 @@ And finally, add a link to sign in via Google to your menu or header or wherever
 
 For more reading about how authentication via Google works here's [the official guide](https://developers.google.com/identity/protocols/OAuth2).
 
-## Authentication via Deezer
+# Authentication via Deezer
 
 ![](https://images.unsplash.com/photo-1527150122806-f682d2fd8b09?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ada3761ade3c12bdfc3af876f4e28667&auto=format&fit=crop&w=2089&q=80)
 
@@ -131,7 +131,7 @@ And again, a link to sign in via Deezer
 {% endraw %}
 ```
 
-#### One more thing
+## One more thing
 
 You might want to ask for some permissions. For example, Deezer does not provide user's email by default. You need to ask a permission for `email`. You can check out a full list of available permissions in [official permissions documentation](https://developers.deezer.com/api/permissions).
 
@@ -141,7 +141,7 @@ Adding required permissions is pretty simple with the  `social-app-django` libra
 SOCIAL_AUTH_DEEZER_SCOPE = ['basic_access', 'email']
 ```
 
-## Authentication via Spotify
+# Authentication via Spotify
 
 ![](https://images.unsplash.com/photo-1532354058425-ba7ccc7e4a24?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=117db81ba4f77871de8d2320d6661f9e&auto=format&fit=crop&w=1650&q=80)
 
@@ -183,7 +183,7 @@ Regarding permissions, I need `user-read-email` and `user-library-read`. You can
 SOCIAL_AUTH_SPOTIFY_SCOPE = ['user-read-email', 'user-library-read']
 ```
 
-## Life after sign in
+# Life after sign in
 
 Usually, after a sign in it's a good idea to show some sort of dashboard or feed or whatever is the main purpose of your application. I'm going to show a screen with all the latest music releases.
 
@@ -252,7 +252,7 @@ LOGIN_REDIRECT_URL = '/releases'
 
 After this line is added all users should go directly to `/releases` URL after they sign in.
 
-## Fixing duplicate users
+# Fixing duplicate users
 
 ![](https://images.unsplash.com/photo-1512746755088-5cf7d5565d9e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=70f0d929ebd7ff35392a2166d97425f4&auto=format&fit=crop&w=2250&q=80)
 
@@ -350,7 +350,7 @@ SOCIAL_AUTH_PIPELINE = (
 
 You can read more about in [the official docs for pipelines](https://python-social-auth.readthedocs.io/en/latest/pipeline.html). We'll build a custom pipeline in the next part of the series.
 
-## Signing out
+# Signing out
 
 ![](https://images.unsplash.com/photo-1520033906782-1684d0e7498e?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=93f0c662e61a6cb38c09aa0d7696d12c&auto=format&fit=crop&w=1934&q=80)
 
@@ -382,7 +382,7 @@ Now, all that is left is to add a sign-out link wherever you want
 {% endraw %}
 ```
 
-## Showing only relevant links
+# Showing only relevant links
 
 But right now your user can see all sign in links as well as a sign-out link. You probably wouldn't want a user to sign in or out 2 times and what does that even mean? So let's show only relevant links.
 
@@ -400,7 +400,7 @@ Django's user model has a special attribute for that called [`is_authenticated`]
 {% endraw %}
 ```
 
-## Conclusion
+# Conclusion
 
 In this story I’ve covered:
 
