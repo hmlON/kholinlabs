@@ -23,42 +23,39 @@ layout: default
     </ul>
   </header>
 
+  <h2 class="post-list-heading">Posts</h2>
+
   <section class="posts content">
     {%- if site.posts.size > 0 -%}
-      <h2 class="post-list-heading">Posts</h2>
+      {%- for post in site.posts -%}
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
-      <ul class="post-list">
-        {%- for post in site.posts -%}
-          <article class="post">
+        <article class="post">
+          <!-- <div class="post-content"> -->
+          <a href="{{ post.url | relative_url }}">
+            <img src="{{ post.cover_image }}" alt="" class="post-image">
+          </a>
 
-            {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-            <div class="post-date post-date-desktop">{{ post.date | date: date_format }}</div>
+          <h4 class="post-title">
+            <a class="post-link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
+          </h4>
+          <div class="post-date">{{ post.date | date: date_format }}</div>
+          <!-- <div class="post-date post-date-mobile">{{ post.date | date: date_format }}</div> -->
 
-            <div class="post-content">
-              <img src="{{ post.cover_image }}" alt="" class="post-image">
+          {%- if site.show_excerpts -%}
+            <div class="post-description">{{ post.excerpt }}</div>
+          {%- endif -%}
 
-              <h4 class="post-heading">
-                <a class="post-link" href="{{ post.url | relative_url }}">
-                  {{ post.title | escape }}
-                </a>
-              </h4>
-              <div class="post-date post-date-mobile">{{ post.date | date: date_format }}</div>
+          <div class="post-read-more-container">
+            <a class="post-read-more" href="{{ post.url | relative_url }}">Read more...</a>
+          </div>
 
-              {%- if site.show_excerpts -%}
-                {{ post.excerpt }}
-              {%- endif -%}
-
-              <div class="post-read-more-container">
-                <a class="post-read-more" href="{{ post.url | relative_url }}">Read more...</a>
-              </div>
-            </div>
-
-            <div class="post-date post-date-desktop post-date-desktop-hidden">{{ post.date | date: date_format }}</div>
-
-          </article>
-        {%- endfor -%}
-      </ul>
-
+          <div class="post-line1"></div>
+          <div class="post-line2"></div>
+        </article>
+      {%- endfor -%}
     {%- endif -%}
   </section>
 </main>
