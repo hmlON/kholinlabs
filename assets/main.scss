@@ -117,6 +117,7 @@ a, a:visited {
     width: 100vw;
     word-wrap: break-word;
     max-width: 50rem;
+    margin-bottom: 3rem;
 
     div.highlight {
       padding: 1.1rem;
@@ -132,6 +133,11 @@ a, a:visited {
       display: block;
       margin: auto;
     }
+  }
+
+  #disqus_thread {
+    width: 90vw;
+    max-width: 50rem;
   }
 }
 

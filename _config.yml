@@ -24,6 +24,9 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 show_excerpts: true
 google_analytics: UA-102898465-3
 
+disqus:
+    shortname: kholinlabs
+
 linkedin_username: Nikita-Kholin
 github_username:  hmlON
 
