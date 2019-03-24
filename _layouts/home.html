@@ -24,15 +24,17 @@ layout: default
     </ul>
   </header>
 
-  <h2 class="post-list-heading">Posts</h2>
+  <nav class="navigation">
+    <a href="#posts" class="navigation-link navigation-link-active">Posts</a>
+    <a href="/about-me" class="navigation-link">About me</a>
+  </nav>
 
-  <section class="posts content">
+  <section class="posts content" id="posts">
     {%- if site.posts.size > 0 -%}
       {%- for post in site.posts -%}
         {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 
         <article class="post">
-          <!-- <div class="post-content"> -->
           <a href="{{ post.url | relative_url }}">
             <img src="{{ post.cover_image }}" alt="" class="post-image">
           </a>
@@ -43,7 +45,6 @@ layout: default
             </a>
           </h4>
           <div class="post-date">{{ post.date | date: date_format }}</div>
-          <!-- <div class="post-date post-date-mobile">{{ post.date | date: date_format }}</div> -->
 
           {%- if site.show_excerpts -%}
             <div class="post-description">{{ post.excerpt }}</div>

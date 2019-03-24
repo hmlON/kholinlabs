@@ -56,6 +56,25 @@ a, a:visited {
   .header {
     background-image: url(https://images.unsplash.com/photo-1512567100135-223e140cd167?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8da2d287529b3ca7bd2dd0c9ba462db0&auto=format&fit=crop&w=2250&q=80);
   }
+
+  .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+
+    .navigation-link {
+      font-size: 2rem;
+      padding: 0 1.5rem 0 1.5rem;
+      text-decoration: none;
+    }
+
+    .navigation-link-active {
+      text-decoration: underline;
+      text-decoration-color: green;
+    }
+  }
 }
 
 .post-page {
@@ -147,12 +166,6 @@ a, a:visited {
     font-size: 1rem;
 
     .header {
-      margin-bottom: 2rem;
-    }
-
-    .post-list-heading {
-      font-size: 2rem;
-      text-align: center;
       margin-bottom: 2rem;
     }
 
@@ -257,12 +270,6 @@ a, a:visited {
 @media all and (min-width: 801px) {
   .home {
     font-size: 1rem;
-
-    .post-list-heading {
-      font-size: 2rem;
-      text-align: center;
-      margin-bottom: 2rem;
-    }
 
     .posts {
       max-width: 70rem;
