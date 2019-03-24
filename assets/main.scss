@@ -52,28 +52,28 @@ a, a:visited {
   }
 }
 
+.navigation {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+
+  .navigation-link {
+    font-size: 2rem;
+    padding: 0 1.5rem 0 1.5rem;
+    text-decoration: none;
+  }
+
+  .navigation-link-active {
+    text-decoration: underline;
+    text-decoration-color: green;
+  }
+}
+
 .home {
   .header {
     background-image: url(https://images.unsplash.com/photo-1512567100135-223e140cd167?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8da2d287529b3ca7bd2dd0c9ba462db0&auto=format&fit=crop&w=2250&q=80);
-  }
-
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 2rem;
-
-    .navigation-link {
-      font-size: 2rem;
-      padding: 0 1.5rem 0 1.5rem;
-      text-decoration: none;
-    }
-
-    .navigation-link-active {
-      text-decoration: underline;
-      text-decoration-color: green;
-    }
   }
 }
 
@@ -160,8 +160,53 @@ a, a:visited {
   }
 }
 
+.about {
+  .header {
+    background-image: url(https://images.unsplash.com/photo-1512567100135-223e140cd167?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=8da2d287529b3ca7bd2dd0c9ba462db0&auto=format&fit=crop&w=2250&q=80);
+    margin-bottom: 3rem;
+
+    .home {
+      flex: 1;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start;
+      font-size: 1.4rem;
+
+      .link {
+        margin: 2rem;
+        color: #fff;
+      }
+    }
+
+    .portrait {
+      border-radius: 50%;
+      border: 0.3rem solid #fff;
+      width: 60vw;
+      max-width: 20rem;
+    }
+
+    .title {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 50rem;
+      padding-bottom: 15vh;
+    }
+  }
+
+  .content {
+    margin: 0 auto 0 auto;
+    max-width: 50rem;
+  }
+}
+
 // mobile
 @media all and (max-width: 800px) {
+  .navigation {
+    margin-bottom: 2rem;
+  }
+
   .home {
     font-size: 1rem;
 
@@ -218,7 +263,7 @@ a, a:visited {
     }
   }
 
-  .post-page {
+  .post-page, .about {
     .content {
       p {
         font-size: 17px;
@@ -261,6 +306,43 @@ a, a:visited {
 
       li {
         margin: 0 0 14px 30px;
+      }
+    }
+  }
+
+  .about {
+    .header {
+      margin-bottom: 2rem;
+    }
+
+    .content {
+      margin: 0 20px 0 20px;
+    }
+
+    .work-experience {
+      .dates {
+        font-size: 0.9rem;
+        color: #888;
+      }
+
+      .about, .technologies {
+        font-size: 1rem;
+        margin: 0.5rem 20px 0 20px;
+      }
+
+      .responsibilities-title {
+        font-size: 23px;
+        line-height: 36px;
+        padding: 0;
+        margin: 0.5rem 20px 0 20px;
+      }
+
+      .responsibilities {
+        margin: 0.5rem 20px 0 20px;
+      }
+
+      .responsibility {
+        font-size: 1rem;
       }
     }
   }
@@ -358,7 +440,7 @@ a, a:visited {
     }
   }
 
-  .post-page {
+  .post-page, .about {
     .content {
       p {
         font-size: 20px;
@@ -401,6 +483,35 @@ a, a:visited {
 
       li {
         margin: 0 0 14px 30px;
+      }
+    }
+  }
+
+  .about {
+    .work-experience {
+      .dates {
+        font-size: 0.9rem;
+        color: #888;
+      }
+
+      .about, .technologies {
+        font-size: 1rem;
+        margin: 0.1rem 0 0 0;
+      }
+
+      .responsibilities-title {
+        font-size: 23px;
+        line-height: 36px;
+        padding: 0;
+        margin: 0.5rem 0 0 0;
+      }
+
+      .responsibilities {
+        margin: 0.5rem 0 0 0;
+      }
+
+      .responsibility {
+        font-size: 1rem;
       }
     }
   }

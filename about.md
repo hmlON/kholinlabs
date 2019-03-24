@@ -1,8 +1,5 @@
 ---
-layout: page
-title: About
+layout: about
+title: About me
 permalink: /about/
 ---
-
-A blog about scientific web development.
-Here you'll find all kinds of things related to Web Development and Data Science.

@@ -1,0 +1,93 @@
+---
+layout: default
+---
+
+<link href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" rel="stylesheet">
+
+
+<div class="about">
+  <header class="header">
+    <div class="home">
+      <a class="link" rel="author" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+    </div>
+    <img src="{{ "/assets/portrait.jpg" | relative_url }}" alt="Nikita Kholin portrait" class="portrait">
+    <h1 class="title">Nikita Kholin</h1>
+  </header>
+
+  <nav class="navigation">
+    <a href="/" class="navigation-link">Posts</a>
+    <a href="#introduction" class="navigation-link navigation-link-active">About me</a>
+  </nav>
+
+  <main class="content" id="about">
+    <section>
+      <p class="introduction" id="introduction">
+        👨‍💻Ruby Backend Developer at Talkable<br>
+        🖋️Love Writing about software development<br>
+        📚Applied Mathematics Student at Kiev Politechnic Institute<br>
+        🔬Data Science Enthusiast<br>
+        🎧Music Addict
+      </p>
+    </section>
+
+    <section>
+      <h1>Skills</h1>
+      <ul>
+        <li>Back end: Ruby (Rails, Sinatra), Python (Flask, Django)</li>
+        <li>Front end: HTML, CSS, JS, React</li>
+        <li>Databases: MySQL, PostgreSQL, MongoDB, Redis</li>
+        <li>Data Science: scikit-learn, numpy, pandas</li>
+        <li>Infrastructure: AWS, Heroku</li>
+        <li>Version control: Git, GitHub</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section class="work-experience">
+      <h1>Work experience</h1>
+      <article class="job">
+        <h2>Talkable - Ruby Backend Engineer (Product team)</h2>
+        <p class="dates">March 2017 - Present</p>
+        <p class="about">Talkable is a SaaS referral marketing platform with 30,000 RPM and 2TB sharded database</p>
+        <p class="technologies">Technologies used: Ruby on Rails, AWS, MySQL, MongoDB, Redis, React</p>
+        <h3 class="responsibilities-title">Responsibilities</h3>
+        <ul class="responsibilities">
+          <li class="responsibility">Artchitect and develop new features</li>
+          <li class="responsibility">Code review for other team members</li>
+          <li class="responsibility">Bug fixing</li>
+          <li class="responsibility">Customer Services Team support</li>
+        </ul>
+      </article>
+    </section>
+
+    <hr>
+
+    <section>
+      <h1>Projects</h1>
+      <ul>
+        <li><a href="https://musicnotifier.com">MuN</a> (Python/Django, MySQL, AWS)</li>
+        <li><a href="https://github.com/hmlON/data-science-notebooks/blob/master/Kaggle%20House%20Price%20Prediction/house_price_prediction.ipynb">House Prices Predictor</a> (Python, pandas, scikit-learn)</li>
+        <li><a href="https://github.com/hmlON/data-science-notebooks/blob/master/PDF%20text%20recognition/PDF%20text%20recognition.ipynb">PDF Text Recongnizer</a> (Python, Tesseract OCR)</li>
+        <li><a href="https://github.com/hmlON/discounts-ua-backend">discounts-ua</a> (Ruby/Sinatra, React, Heroku)</li>
+        <li><a href="https://github.com/hmlON/minigithub">minigithub</a> (React, GitHub API)</li>
+        <li><a href="https://github.com/hmlON/trivia-ngjs">trivia-ngjs</a> (AngularJS)</li>
+        <li><a href="https://github.com/hmlON/room538">Room538</a> (Ruby/Rails, PostgreSQL, Heroku)</li>
+      </ul>
+    </section>
+
+    <hr>
+
+    <section>
+      <h1>Education</h1>
+      <ul>
+        <li>Applied Mathematics Bachelors at Kyiv Polytechnic institute</li>
+        <li>Machine learning course from Andrew NG</li>
+        <li>Applied Machine Learning course</li>
+        <li>DataRootUniversity</li>
+        <li>Kottans FE course</li>
+        <li>Kottans Ruby course</li>
+      </ul>
+    </section>
+  </main>
+</div>
